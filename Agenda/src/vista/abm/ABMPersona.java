@@ -1,7 +1,5 @@
 package vista.abm;
-
 import java.util.Scanner;
-
 import controlador.Controlador;
 import modelo.Respuesta;
 
