@@ -47,7 +47,7 @@ public class Busqueda {
 					System.out.print("Introduzca el nombre de la persona: ");
 					String nombreCiudad;
 					nombreCiudad = sc.next();
-					System.out.println(controlador.busquedaPersonasPorNombre(nombreCiudad));
+					System.out.println(controlador.getControladorPersona.busquedaPersonasPorNombre(nombreCiudad));
 					break;
 			}
 			case "2": 
@@ -58,11 +58,11 @@ public class Busqueda {
 				String codigoCiudad;
 				codigoCiudad = sc.next();
 				
-				Respuesta resultado = this.controlador.isCodigoCiudad(codigoCiudad);
+				Respuesta resultado = this.controlador.getControladorCiudad.isCodigoCiudad(codigoCiudad);
 				
 				switch (resultado) {
 				case OK: {
-					System.out.println(this.controlador.busquedaPersonasPorCiudad(codigoCiudad));	
+					System.out.println(this.controlador.getControladorPersona.busquedaPersonasPorCiudad(codigoCiudad));	
 					break;
 				}
 				case ERROR_NO_EXISTE:{System.out.println("El Codigo no pertenece a ninguna Ciudad");break;}
@@ -80,11 +80,11 @@ public class Busqueda {
 				String codigoEmpresa;
 				codigoEmpresa = sc.next();
 				
-				Respuesta resultado = this.controlador.isCodigoEmpresa(codigoEmpresa);
+				Respuesta resultado = this.controlador.getControladorEmpresa.isCodigoEmpresa(codigoEmpresa);
 				
 				switch (resultado) {
 				case OK: {
-					System.out.println(this.controlador.busquedaPersonasPorEmpresa(codigoEmpresa));	
+					System.out.println(this.controlador.getControladorPersona.busquedaPersonasPorEmpresa(codigoEmpresa));	
 					break;
 				}
 				case ERROR_NO_EXISTE:{System.out.println("El Codigo no pertenece a ninguna Empresa");break;}
@@ -115,7 +115,7 @@ public class Busqueda {
 					else {ciudades.add(r);}
 				}
 				
-				System.out.println(this.controlador.busquedaNombrePorCiudades(nombrePersona,ciudades));
+				System.out.println(this.controlador.getControladorCiudad.busquedaNombrePorCiudades(nombrePersona,ciudades));
 				break;
 			}
 			case "0":{this.b=false;break;}

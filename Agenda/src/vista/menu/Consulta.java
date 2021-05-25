@@ -47,10 +47,10 @@ public class Consulta {
 			        respuesta = sc.next();
 			        	
 			        switch (respuesta) {
-					case "1": {System.out.println(controlador.toStringCiudad());break;}
-					case "2": {System.out.println(controlador.toStringCiudadPersona());break;}
-					case "3": {System.out.println(controlador.toStringCiudadEmpresa());break;}
-					case "4": {System.out.println(controlador.toStringCiudadPersonaEmpresa());break;}
+					case "1": {System.out.println(controlador.getControladorCiudad.toStringCiudad());break;}
+					case "2": {System.out.println(controlador.getControladorCiudad.toStringCiudadPersona());break;}
+					case "3": {System.out.println(controlador.getControladorCiudad.toStringCiudadEmpresa());break;}
+					case "4": {System.out.println(controlador.getControladorCiudad.toStringCiudadPersonaEmpresa());break;}
 					case "0": {break;}
 					default: {System.out.println("Opcion Incorrecta"); break;}
 					}
@@ -68,8 +68,8 @@ public class Consulta {
 			        respuesta = sc.next();
 			        	
 			        switch (respuesta) {
-					case "1": {System.out.println(controlador.toStringEmpresa());break;}
-					case "2": {System.out.println(controlador.toStringEmpresaContacto());break;}
+					case "1": {System.out.println(controlador.getControladorEmpresa.toStringEmpresa());break;}
+					case "2": {System.out.println(controlador.getControladorEmpresa.toStringEmpresaContacto());break;}
 					case "0": {break;}
 					default: {System.out.println("Opcion Incorrecta"); break;}
 					}
@@ -88,8 +88,8 @@ public class Consulta {
 			        respuesta = sc.next();
 			        	
 			        switch (respuesta) {
-					case "1": {System.out.println(controlador.toStringPersona());break;}
-					case "2": {System.out.println(controlador.toStringPersonaEmpresa());break;}
+					case "1": {System.out.println(controlador.getControladorPersona.toStringPersona());break;}
+					case "2": {System.out.println(controlador.getControladorPersona.toStringPersonaEmpresa());break;}
 					case "0": {break;}
 					default: {System.out.println("Opcion Incorrecta"); break;}
 					}

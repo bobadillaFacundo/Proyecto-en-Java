@@ -28,7 +28,7 @@ public class ABMPersona implements ABM {
 		String ciudad; 
 		System.out.print("Introduzca el codigo de la ciudad: ");
 		ciudad = sc.next();
-		Respuesta resultado = this.controlador.addPersona(codigo,nombre,numero,mail,ciudad);
+		Respuesta resultado = this.controlador.getControladorPersona.addPersona(codigo,nombre,numero,mail,ciudad);
 		
 		switch (resultado) {
 		case OK: { System.out.println("Alta Exitosa");break;}
@@ -43,7 +43,7 @@ public class ABMPersona implements ABM {
 		String codigo;
 		System.out.print("Introduzca el codigo de la persona: ");
 		codigo = sc.next();
-		Respuesta resultado = this.controlador.removePersona(codigo);
+		Respuesta resultado = this.controlador.getControladorPersona.removePersona(codigo);
 		
 		switch (resultado) {
 		case OK: { System.out.println("Baja Exitosa");break;}
@@ -59,7 +59,7 @@ public class ABMPersona implements ABM {
 		String codigo;
 		codigo = sc.next();
 	
-		Respuesta respuesta= this.controlador.isCodigoPersona(codigo);
+		Respuesta respuesta= this.controlador.getControladorPersona.isCodigoPersona(codigo);
 		
 		switch (respuesta) 
 		{
@@ -80,9 +80,9 @@ public class ABMPersona implements ABM {
 					System.out.print("Introduzca el codigo de la ciudad: ");
 					ciudad = sc.next();
 					
-					if (Respuesta.OK==this.controlador.isCodigoCiudad(ciudad)) 
+					if (Respuesta.OK==this.controlador.getControladorCiudad.isCodigoCiudad(ciudad)) 
 					{	
-						this.controlador.modificacionPersona(codigo,nombre,numero,mail,ciudad);
+						this.controlador.getControladorPersona.modificacionPersona(codigo,nombre,numero,mail,ciudad);
 						System.out.println("Modificacion Exitosa");
 					} else
 						{

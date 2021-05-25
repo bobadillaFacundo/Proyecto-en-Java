@@ -31,7 +31,7 @@ public class ABMEmpresa implements ABM {
 		String ciudad; 
 		System.out.print("Introduzca el codigo de la ciudad: ");
 		ciudad = sc.next();
-		Respuesta resultado = this.controlador.addEmpresa(codigo,nombre,numero,mail,ciudad);
+		Respuesta resultado = this.controlador.getControladorEmpresa.addEmpresa(codigo,nombre,numero,mail,ciudad);
 		
 		switch (resultado) {
 		case OK: { System.out.println("Alta Exitosa");break;}
@@ -47,17 +47,17 @@ public class ABMEmpresa implements ABM {
 		System.out.print("Introduzca el codigo de la empresa: ");
 		String codigo;
 		codigo = sc.next();
-		switch (this.controlador.isCodigoEmpresa(codigo)) 
+		switch (this.controlador.getControladorEmpresa.isCodigoEmpresa(codigo)) 
 				{		
 				case OK:
 				{
 					System.out.print("Introduzca el codigo de la persona: ");
 					String codigoP;
 					codigoP = sc.next();
-					switch (this.controlador.isCodigoPersona(codigoP)) 
+					switch (this.controlador.getControladorPersona.isCodigoPersona(codigoP)) 
 					{				
 						case OK: {
-							switch (this.controlador.addContactoEmpresa(codigo,codigoP)) 
+							switch (this.controlador.getControladorEmpresa.addContactoEmpresa(codigo,codigoP)) 
 							{
 								case OK: {System.out.println("Se asigno Correctamente");break;}
 								case ERROR_EXISTE:{System.out.println("Persona ya esta asociada a esta empresa"); break;}
@@ -85,7 +85,7 @@ public class ABMEmpresa implements ABM {
 		String codigo;
 		System.out.print("Introduzca el codigo de la Empresa: ");
 		codigo = sc.next();
-		Respuesta resultado = this.controlador.removeEmpresa(codigo);
+		Respuesta resultado = this.controlador.getControladorEmpresa.removeEmpresa(codigo);
 		
 		switch (resultado) {
 		case OK: { System.out.println("Baja Exitosa");break;}
@@ -102,7 +102,7 @@ public class ABMEmpresa implements ABM {
 		String codigo;
 		codigo = sc.next();
 	
-		Respuesta respuesta= this.controlador.isCodigoEmpresa(codigo);
+		Respuesta respuesta= this.controlador.getControladorEmpresa.isCodigoEmpresa(codigo);
 		
 		switch (respuesta) 
 		{
@@ -123,9 +123,9 @@ public class ABMEmpresa implements ABM {
 					System.out.print("Introduzca el codigo de la ciudad: ");
 					ciudad = sc.next();
 					
-					if (Respuesta.OK==this.controlador.isCodigoCiudad(ciudad)) 
+					if (Respuesta.OK==this.controlador.getControladorCiudad.isCodigoCiudad(ciudad)) 
 					{	
-						this.controlador.modificacionEmpresa(codigo,nombre,numero,mail,ciudad);
+						this.controlador.getControladorEmpresa.modificacionEmpresa(codigo,nombre,numero,mail,ciudad);
 						System.out.println("Modificacion Exitosa");
 					} else
 						{
@@ -145,17 +145,17 @@ public class ABMEmpresa implements ABM {
 			System.out.print("Introduzca el codigo de la empresa: ");
 			String codigo;
 			codigo = sc.next();
-			switch (this.controlador.isCodigoEmpresa(codigo)) 
+			switch (this.controlador.getControladorEmpresa.isCodigoEmpresa(codigo)) 
 					{		
 					case OK:
 					{
 						System.out.print("Introduzca el codigo de la persona: ");
 						String codigoP;
 						codigoP = sc.next();
-						switch (this.controlador.isCodigoPersona(codigoP)) 
+						switch (this.controlador.getControladorPersona.isCodigoPersona(codigoP)) 
 						{				
 							case OK: {
-								switch (this.controlador.removeContactoEmpresa(codigo,codigoP)) 
+								switch (this.controlador.getControladorEmpresa.removeContactoEmpresa(codigo,codigoP)) 
 								{
 									case OK: {System.out.println("Se quito la asignacion Correctamente");break;}
 									case ERROR_NO_EXISTE:{System.out.println("Persona no esta asociada a esta empresa"); break;}

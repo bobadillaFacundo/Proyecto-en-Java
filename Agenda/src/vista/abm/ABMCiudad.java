@@ -25,7 +25,7 @@ public class ABMCiudad implements ABM {
 		String provicnia; 
 		System.out.print("Introduzca el nombre de la provincia a donde pertenece la ciudad: ");
 		provicnia = sc.next();
-		Respuesta resultado = this.controlador.addCiudad(codigo,nombre,provicnia);
+		Respuesta resultado = this.controlador.getControladorCiudad.addCiudad(codigo,nombre,provicnia);
 		
 		switch (resultado) 
 		{
@@ -42,7 +42,7 @@ public class ABMCiudad implements ABM {
 		String codigo;
 		System.out.print("Introduzca el codigo de la ciudad: ");
 		codigo = sc.next();
-		Respuesta resultado = this.controlador.removeCiudad(codigo);
+		Respuesta resultado = this.controlador.getControladorCiudad.removeCiudad(codigo);
 		
 		switch (resultado) 
 		{
@@ -62,7 +62,7 @@ public class ABMCiudad implements ABM {
 		String codigo;
 		codigo = sc.next();
 	
-		Respuesta respuesta= this.controlador.isCodigoCiudad(codigo);
+		Respuesta respuesta= this.controlador.getControladorCiudad.isCodigoCiudad(codigo);
 		
 		switch (respuesta) 
 		{
@@ -77,7 +77,7 @@ public class ABMCiudad implements ABM {
 			String provicnia; 
 			System.out.print("Introduzca el nombre de la provincia a donde pertenece la ciudad: ");
 			provicnia = sc.next();
-			Respuesta resultado = this.controlador.modificarCiudad(codigo,nombre,provicnia);
+			Respuesta resultado = this.controlador.getControladorCiudad.(codigo,nombre,provicnia);
 			
 			
 			switch (resultado) 
