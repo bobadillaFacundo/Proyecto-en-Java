@@ -1,8 +1,6 @@
 
 package vista.menu;
-
 import java.util.Scanner;
-
 import controlador.Controlador;
 
 public class Principal implements Runnable{
