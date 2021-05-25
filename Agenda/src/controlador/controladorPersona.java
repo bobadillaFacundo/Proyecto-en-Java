@@ -6,7 +6,7 @@ import modelo.Respuesta;
 public class ControladorPersona {
 	private final Fachada modelo;
 
-	public ControladorCiudad(Fachada f) {super(); this.modelo = f }
+	public ControladorPersona(Fachada f) {super(); this.modelo = f }
 
 	public Respuesta addPersona(String codigo,String nombre,  String numero, String mail, String ciudad) {return this.modelo.addPersona(codigo, nombre, numero, mail, ciudad);}
 
