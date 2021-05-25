@@ -16,7 +16,11 @@ public class Principal implements Runnable{
 		this.controlador = controlador;
 	}
 	 
-	
+	@Override
+	public void run() {
+		inicio();
+	}
+
 	public void inicio ()
 	{	
 		while(b)
@@ -62,16 +66,6 @@ public class Principal implements Runnable{
 		}			
 		
 	}
-
-
-	@Override
-	public void run() {
-		inicio();
-	}
-
-	public static void main (String [] args) {
-	 new Thread (new Principal(new Controlador())).start();
-	 }
 	
 }
 	
