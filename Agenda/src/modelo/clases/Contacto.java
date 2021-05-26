@@ -6,13 +6,13 @@ public abstract class Contacto {
 	private String nombre;
 	private String numero;
 	private String mail;
-	
+	private Ciudad ciudad;
+
 	@Override
 	public String toString() {
 		return " [codigo=" + codigo + ", nombre=" + nombre + ", numero=" + numero + ", mail=" + mail
 				+ "," + ciudad.toString() + "]";
 	}
-	private Ciudad ciudad;
 	
 	
 	public Contacto(int codigo, String nombre, String numero, String mail, Ciudad ciudad) {
