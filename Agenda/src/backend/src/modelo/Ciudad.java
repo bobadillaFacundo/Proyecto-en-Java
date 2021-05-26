@@ -2,14 +2,16 @@ package modelo.clases;
 
 import java.util.ArrayList;
 
-public class Ciudad 
-{
+public class Ciudad {
 	private int codigo;
-	
+	private String provincia;
+	private String nombre;
+	private ArrayList<Persona> personas;
+	private ArrayList<Empresa> empresas;
+
 	public int getCodigoCiudad() {
 		return codigo;
 	}
-
 
 	public Ciudad(int codigo, String provincia, String nombre) {
 		super();
@@ -20,19 +22,13 @@ public class Ciudad
 		empresas = new ArrayList<Empresa>();
 	}
 
-	private String provincia;
-	private String nombre;
-	private ArrayList<Persona> personas;
-	private ArrayList<Empresa> empresas;
-	
-
 	@Override
 	public String toString() {
 		return "Ciudad [codigo=" + codigo + ", provincia=" + provincia + ", nombre=" + nombre + "]";
 	}
-	
+
 	public String toStringPersonas() {
-		String cadena ="";
+		String cadena = "";
 
 		for (Persona persona : personas) {
 			cadena = cadena + "\n" + persona.toString();
@@ -43,12 +39,12 @@ public class Ciudad
 
 		return cadena;
 	}
-	
+
 	public String toStringEmpresas() {
 		String cadena = "";
 
 		for (Empresa empresa : empresas) {
-			cadena = cadena +  "\n" + empresa.toString();
+			cadena = cadena + "\n" + empresa.toString();
 		}
 
 		if (cadena.equals(""))
@@ -56,55 +52,45 @@ public class Ciudad
 
 		return cadena;
 	}
-	
-	public ArrayList<Persona> getPersonas() 
-	{
+
+	public ArrayList<Persona> getPersonas() {
 		return personas;
 	}
-	
-	public boolean addEmpresa(Empresa empresa) 
-	{
+
+	public boolean addEmpresa(Empresa empresa) {
 		return this.empresas.add(empresa);
 	}
-	
-	public boolean removeEmpresa(Empresa empresa) 
-	{
+
+	public boolean removeEmpresa(Empresa empresa) {
 		return this.empresas.remove(empresa);
 	}
-	
-	public ArrayList<Empresa> getEmpresa() 
-	{
+
+	public ArrayList<Empresa> getEmpresa() {
 		return empresas;
 	}
-	
-	public boolean addPersonas(Persona persona) 
-	{
+
+	public boolean addPersonas(Persona persona) {
 		return this.personas.add(persona);
 	}
-	
-	public boolean removePersonas(Persona persona) 
-	{
+
+	public boolean removePersonas(Persona persona) {
 		return this.personas.remove(persona);
 	}
-	
-	public String getNombre() 
-	{ 
-		return nombre; 
+
+	public String getNombre() {
+		return nombre;
 	}
-	
-	public void setNombre(String nombre) 
-	{
+
+	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	
-	public String getProvincia() 
-	{
+
+	public String getProvincia() {
 		return provincia;
 	}
-	
-	public void setProvincia(String provincia) 
-	{
+
+	public void setProvincia(String provincia) {
 		this.provincia = provincia;
 	}
-	
+
 }
