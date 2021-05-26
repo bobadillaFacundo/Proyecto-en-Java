@@ -10,6 +10,12 @@ public class Empresa extends Contacto{
 		this.contactos = new ArrayList<Persona>();
 	}
 
+	
+	@Override
+	public int getCodigo() {
+		return super().getCodigo();;
+	}
+
 	private ArrayList<Persona> contactos;
 
 	public ArrayList<Persona> getContactos() {return contactos;}
