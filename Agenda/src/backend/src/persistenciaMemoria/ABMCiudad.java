@@ -1,9 +1,9 @@
-package modelo.comportamiento;
+package persistenciaMemoria;
 
 import java.util.Map;
 
-import src.Generic;
-import src.Respuesta;
+import Generic;
+import Respuesta;
 import modelo.Ciudad;
 
 public class ABMCiudad extends Generic {

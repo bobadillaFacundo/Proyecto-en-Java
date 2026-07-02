@@ -1,4 +1,4 @@
-package modelo.clases;
+package modelo;
 
 import java.util.ArrayList;
 
@@ -13,7 +13,7 @@ public class Empresa extends Contacto{
 	
 	@Override
 	public int getCodigo() {
-		return super().getCodigo();;
+		return super.getCodigo();
 	}
 
 	private ArrayList<Persona> contactos;

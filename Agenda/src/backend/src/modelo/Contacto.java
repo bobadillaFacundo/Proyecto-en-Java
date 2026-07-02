@@ -1,4 +1,4 @@
-package modelo.clases;
+package modelo;
 
 public abstract class Contacto {
 

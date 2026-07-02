@@ -1,4 +1,4 @@
-package vista.abm;
+package vista.abm.copy;
 
 import java.util.Scanner;
 import controlador.Controlador;
